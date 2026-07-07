@@ -1,8 +1,29 @@
 ---
+interface Props {
+  headingType?: "h1" | "h2" | "h3" | "h4";
+}
+const { headingType = "h1" } = Astro.props;
+const Tag = headingType;
 
-const {} = Astro.props
+const handleHeadingStyles = (headingStyle: "h1" | "h2" | "h3" | "h4") => {
+  if (headingStyle === "h2") {
+    // text-preset-2-light on larger screens
+    return ["text-preset-3-light"];
+  }
+
+  if (headingStyle === "h3") {
+    return ["text-preset-4-light"];
+  }
+
+  if (headingStyle === "h4") {
+    return ["text-preset-6-light"];
+  }
+
+  // text-preset-1-light on larger screens
+  return ["text-preset-2-light"];
+};
 ---
 
-<h1>
-
-</h1>
+<Tag class="text-preset-2-light" class:list={handleHeadingStyles(headingType)}>
+  <slot />
+</Tag>

@@ -1,0 +1,25 @@
+---
+interface Props {
+  textType?: "sm" | "md" | "lg";
+}
+const { textType = "sm" } = Astro.props;
+const Tag = textType;
+
+const handleTextStyles = (textType: "sm" | "md" | "lg") => {
+  if (textType === "md") {
+    // larger screens: text-preset-6-light // 16px
+    return ["text-preset-7-regular"]; // start on 14px
+  }
+
+  if (textType === "lg") {
+    // larger screens: text-preset-5-regular // 18px
+    return ["text-preset-7-regular"]; // start on 14px
+  }
+
+  return ["text-preset-7-regular"]; // 14px
+};
+---
+
+<Tag class="text-preset-2-light" class:list={handleTextStyles(textType)}>
+  <slot />
+</Tag>
