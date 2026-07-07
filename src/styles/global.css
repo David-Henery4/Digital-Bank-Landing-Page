@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-sans:
+    "Public Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* Type scale (design system base: 18px = 1.125rem) */
+  --text-base: 1.125rem;
+  --text-base--line-height: calc(1.6 / 1.125);
+
+  /* Colors */
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+
+  --color-gray-50: hsl(0, 0%, 98%);
+  --color-gray-100: hsl(220, 16%, 96%);
+  --color-gray-600: hsl(233, 8%, 62%);
+
+  --color-blue-950: hsl(233, 26%, 24%);
+  --color-green-500: hsl(136, 64%, 51%);
+  --color-cyan-400: hsl(192, 69%, 51%);
+
+  /* Gradient stops */
+  --color-gradient-1-start: #33d35e;
+  --color-gradient-1-end: #2ab6d9;
+  --color-gradient-2-start: #2d314d;
+  --color-gradient-2-stop: rgba(45, 49, 77, 0);
+
+  /* Background-image theme variables (referencing gradient stops) */
+  --backgroundImage-gradient-1: linear-gradient(
+    135deg,
+    var(--color-gradient-1-start) 0%,
+    var(--color-gradient-1-end) 100%
+  );
+  --backgroundImage-gradient-2: linear-gradient(
+    180deg,
+    var(--color-gradient-2-start) 0%,
+    var(--color-gradient-2-stop) 100%
+  );
+
+  /* Spacing scale (design system) */
+  --spacing-0: 0px;
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-700: 56px;
+  --spacing-800: 64px;
+  --spacing-900: 72px;
+  --spacing-1000: 80px;
+  --spacing-1500: 120px;
+}
