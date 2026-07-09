@@ -1,8 +1,9 @@
 ---
 interface Props {
   textType?: "sm" | "md" | "lg";
+  optionalStyles?: string[];
 }
-const { textType = "sm" } = Astro.props;
+const { textType = "sm", optionalStyles = [""] } = Astro.props;
 const Tag = textType;
 
 const handleTextStyles = (textType: "sm" | "md" | "lg") => {
@@ -13,13 +14,16 @@ const handleTextStyles = (textType: "sm" | "md" | "lg") => {
 
   if (textType === "lg") {
     // larger screens: text-preset-5-regular // 18px
-    return ["text-preset-7-regular"]; // start on 14px
+    return ["text-preset-7-regular mobile-md:text-preset-5-regular"]; // start on 14px
   }
 
   return ["text-preset-7-regular"]; // 14px
 };
 ---
 
-<Tag class="text-gray-600" class:list={handleTextStyles(textType)}>
+<Tag
+  class="text-gray-600"
+  class:list={[...handleTextStyles(textType), ...optionalStyles]}
+>
   <slot />
 </Tag>

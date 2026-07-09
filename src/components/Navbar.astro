@@ -3,9 +3,19 @@ import LogoDark from "/public/images/logo-dark.svg";
 import BurgerIcon from "/public/images/icon-hamburger.svg";
 ---
 
-<nav class="w-full bg-white py-6 col-full grid-layout row-start-1 row-end-2 z-10 self-start">
+<nav
+  class="w-full bg-white py-6 col-full grid-layout row-start-1 row-end-2 z-10 self-start"
+>
   <div class="w-full flex justify-between items-center col-content">
-    <LogoDark />
-    <BurgerIcon />
+    <a href="/">
+      <span class="sr-only">
+        Home Logo Link
+      </span>
+      <LogoDark />
+    </a>
+    <button class="hover:cursor-pointer">
+      <span class="sr-only">Open Sidebar Navigation</span>
+      <BurgerIcon />
+    </button>
   </div>
 </nav>

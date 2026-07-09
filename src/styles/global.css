@@ -2,6 +2,17 @@
 @import "./grid-styles.css";
 
 @theme {
+
+  /* Breakpoints */
+  --breakpoint-*: initial;
+  --breakpoint-mobile-sm: 26.5em; /* 424px */
+  --breakpoint-mobile-md: 32.5em; /* 520px */
+  --breakpoint-mobile-lg: 35em; /* 520px */
+  --breakpoint-mobile-xl: 40em; /* 640px */
+
+  --breakpoint-tablet-sm: 46.25em; /* 740px */
+
+
   /* Typography */
   --font-sans:
     "Public Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",

@@ -20,10 +20,10 @@ const handleHeadingStyles = (headingStyle: "h1" | "h2" | "h3" | "h4") => {
   }
 
   // text-preset-1-light on larger screens
-  return ["text-preset-2-light"];
+  return ["text-preset-2-light mobile-md:text-preset-1-light"];
 };
 ---
 
-<Tag class="text-preset-2-light" class:list={handleHeadingStyles(headingType)}>
+<Tag class:list={handleHeadingStyles(headingType)}>
   <slot />
 </Tag>

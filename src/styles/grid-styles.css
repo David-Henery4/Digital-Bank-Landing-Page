@@ -12,7 +12,7 @@
     minmax(var(--gutter-mobile), 1fr)
     minmax(0, var(--container-max-width))
     minmax(var(--gutter-mobile), 1fr);
-  @media (width >= 768px) {
+  @media (width >= 424px) {
     grid-template-columns:
       minmax(var(--gutter-tablet), 1fr)
       minmax(0, var(--container-max-width))

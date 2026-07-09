@@ -3,20 +3,27 @@ import { Image } from "astro:assets";
 import { Heading, BaseText } from "./text";
 import CtaButton from "./reusable/CtaButton.astro";
 import BgHeadergraphicMobile from "/public/images/bg-intro-mobile.svg";
+import BgHeadergraphicDesktop from "/public/images/bg-intro-desktop.svg";
 import mobileImagePlane from "/public/images/image-mockups.png";
 ---
 
-<header class="w-full col-content row-start-1 row-end-2">
+<header class="w-full pb-[56px] col-content row-start-1 row-end-2">
   <div class="absolute overflow-hidden w-svw top-0 left-0 -z-10">
-    <BgHeadergraphicMobile />
+    <BgHeadergraphicMobile class="w-svw mobile-lg:hidden" />
+    <BgHeadergraphicDesktop
+      class="w-auto -translate-x-26.25 -translate-y-87.5 hidden mobile-lg:block"
+    />
   </div>
   <div class="grid gap-12">
-    <div>
-      <Image src={mobileImagePlane} alt="Four mobile phones displaying the digital banking app on their screens" />
+    <div class="-mt-10 mobile-md:-mt-20 mobile-xl:-mt-32.5 tablet-sm:-mt-42">
+      <Image
+        src={mobileImagePlane}
+        alt="Four mobile phones displaying the digital banking app on their screens"
+      />
     </div>
-    <div class="text-center grid gap-6">
+    <div class="text-center grid gap-6 max-w-90 mx-auto mobile-md:max-w-107.5">
       <Heading> Next generation digital banking </Heading>
-      <BaseText>
+      <BaseText textType="lg">
         Take your financial life online. Your Digitalbank account will be a
         one-stop-shop for spending, saving, budgeting, investing, and much more.
       </BaseText>
