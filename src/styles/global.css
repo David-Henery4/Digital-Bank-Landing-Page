@@ -134,3 +134,9 @@
   --grid-template-columns-tablet: 80px 1fr 80px;
   --grid-template-columns-desktop: 161px 1fr 161px; */
 }
+
+@utility section-y-padding {
+  padding: 64px 0px;
+  /* Tablet: 80px */
+  /* Desktop: 96px */
+}

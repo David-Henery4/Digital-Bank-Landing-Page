@@ -1,0 +1,31 @@
+---
+import articlesData from "../../local-data/articleData";
+import { Heading, BaseText } from "../text";
+import { Image } from "astro:assets";
+---
+
+<section class="w-full text-center section-y-padding">
+  <Heading headingType="h2"> Latest Articles </Heading>
+  <div class="mt-12 grid gap-4">
+    {
+      articlesData.map((articleInfo) => {
+        return (
+          <div class="bg-white overflow-hidden rounded-md">
+            <Image
+              src={articleInfo.image}
+              alt={articleInfo.title}
+              width={500}
+              height={400}
+              class="h-50 object-center object-cover aspect-auto"
+            />
+            <div class="grid gap-2 text-left py-6 px-4">
+              <span class="mb-2">By {articleInfo.author}</span>
+              <Heading headingType="h4">{articleInfo.title}</Heading>
+              <BaseText>{articleInfo.excerpt}</BaseText>
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>

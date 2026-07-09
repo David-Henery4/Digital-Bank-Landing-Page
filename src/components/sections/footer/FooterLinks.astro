@@ -1,0 +1,15 @@
+---
+import linksData from "../../../local-data/linksData";
+---
+
+<menu class="grid gap-4">
+  {
+    linksData.map((linkItem) => {
+      return (
+        <li>
+          <a href="#">{linkItem.title}</a>
+        </li>
+      );
+    }).slice(1)
+  }
+</menu>
