@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 
 <section class="w-full text-center section-y-padding">
   <Heading headingType="h2"> Latest Articles </Heading>
-  <div class="mt-12 grid gap-4">
+  <div class="mt-12 grid gap-4 grid-cols-features">
     {
       articlesData.map((articleInfo) => {
         return (
@@ -18,8 +18,10 @@ import { Image } from "astro:assets";
               height={400}
               class="h-50 object-center object-cover aspect-auto"
             />
-            <div class="grid gap-2 text-left py-6 px-4">
-              <span class="mb-2">By {articleInfo.author}</span>
+            <div class="grid gap-2 text-left py-6 px-4 mobile-sm:px-8 mobile-md:px-10">
+              <span class="mb-2 text-preset-8-regular">
+                By {articleInfo.author}
+              </span>
               <Heading headingType="h4">{articleInfo.title}</Heading>
               <BaseText>{articleInfo.excerpt}</BaseText>
             </div>

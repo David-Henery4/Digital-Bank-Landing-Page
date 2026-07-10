@@ -10,6 +10,7 @@
   --breakpoint-mobile-lg: 35em; /* 520px */
   --breakpoint-mobile-xl: 40em; /* 640px */
 
+  --breakpoint-tablet-xs: 41.25em; /* 660px */
   --breakpoint-tablet-sm: 46.25em; /* 740px */
 
 
@@ -139,11 +140,13 @@
 
   --gutter-mobile: 24px;
   --gutter-tablet: 40px;
+  --gutter-tablet-lg: 80px;
   --gutter-desktop: 80px;
 
   /* --grid-template-columns-mobile: 24px 1fr 24px;
   --grid-template-columns-tablet: 80px 1fr 80px;
   --grid-template-columns-desktop: 161px 1fr 161px; */
+  --grid-template-columns-features: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
 }
 
 @utility section-y-padding {

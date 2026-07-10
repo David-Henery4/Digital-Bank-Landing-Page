@@ -4,12 +4,11 @@ interface Props {
   optionalStyles?: string[];
 }
 const { textType = "sm", optionalStyles = [""] } = Astro.props;
-const Tag = textType;
 
 const handleTextStyles = (textType: "sm" | "md" | "lg") => {
   if (textType === "md") {
     // larger screens: text-preset-6-light // 16px
-    return ["text-preset-7-regular"]; // start on 14px
+    return ["text-preset-7-regular mobile-md:text-preset-6-light"]; // start on 14px
   }
 
   if (textType === "lg") {
@@ -21,9 +20,9 @@ const handleTextStyles = (textType: "sm" | "md" | "lg") => {
 };
 ---
 
-<Tag
+<p
   class="text-gray-600"
   class:list={[...handleTextStyles(textType), ...optionalStyles]}
 >
   <slot />
-</Tag>
+</p>

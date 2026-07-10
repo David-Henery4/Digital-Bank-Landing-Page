@@ -5,18 +5,20 @@ import { Image } from "astro:assets";
 ---
 
 <section class="w-full section-y-padding text-center">
-  <div class="grid gap-4">
+  <div class="grid gap-4 mx-auto max-w-82.5 mobile-md:max-w-129.5">
     <Heading headingType="h2"> Why choose Digitalbank? </Heading>
-    <BaseText>
+    <BaseText textType="lg">
       We leverage Open Banking to turn your bank account into your financial
       hub. Control your finances like never before.
     </BaseText>
   </div>
-  <div class="mt-12 grid gap-8">
+  <div
+    class="mt-12 grid grid-cols-features justify-center gap-8 mobile-md:mt-900 mobile-md:gap-x-14 mobile-md:gap-y-16 tablet-xs:text-left tablet-xs:items-start"
+  >
     {
       featuresData.map((featureInfo) => {
         return (
-          <div class="flex flex-col justify-center items-center gap-10">
+          <div class="w-full max-w-63.75 mx-auto flex flex-col justify-start items-center gap-10 tablet-xs:items-start tablet-xs:mx-0">
             <div>
               <Image
                 src={featureInfo.icon}
@@ -26,9 +28,11 @@ import { Image } from "astro:assets";
                 class="object-center object-cover"
               />
             </div>
-            <div class="grid gap-6">
+            <div class="grid gap-6 mx-auto max-w-63.75">
               <Heading headingType="h3">{featureInfo.title}</Heading>
-              <BaseText>{featureInfo.description}</BaseText>
+              <BaseText textType="md" optionalStyles={["max-w-[327px] mx-auto"]}>
+                {featureInfo.description}
+              </BaseText>
             </div>
           </div>
         );

@@ -8,7 +8,7 @@ const Tag = headingType;
 const handleHeadingStyles = (headingStyle: "h1" | "h2" | "h3" | "h4") => {
   if (headingStyle === "h2") {
     // text-preset-2-light on larger screens
-    return ["text-preset-3-light"];
+    return ["text-preset-3-light mobile-md:text-preset-2-light"];
   }
 
   if (headingStyle === "h3") {

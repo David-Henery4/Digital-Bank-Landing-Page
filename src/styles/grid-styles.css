@@ -18,6 +18,12 @@
       minmax(0, var(--container-max-width))
       minmax(var(--gutter-tablet), 1fr);
   }
+  @media (width >= 768px) {
+    grid-template-columns:
+      minmax(var(--gutter-tablet-lg), 1fr)
+      minmax(0, var(--container-max-width))
+      minmax(var(--gutter-tablet-lg), 1fr);
+  }
 }
 
 /* @utility grid-layout {
