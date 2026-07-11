@@ -6,6 +6,13 @@
   grid-column: 1 / -1;
 }
 
+@utility col-half {
+  grid-column: 2 / 3;
+  @media (min-width: 1024px) {
+    grid-column: 2 / -1;
+  }
+}
+
 @utility grid-layout {
   display: grid;
   grid-template-columns:

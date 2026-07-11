@@ -17,7 +17,8 @@
 
   /* Laptop */
   --breakpoint-laptop-sm: 64em; /* 1024px */
-  --breakpoint-laptop-md: 80.3125em; /* 1285px */
+  --breakpoint-laptop-md: 74.6875em; /* 1195px */
+  /* --breakpoint-laptop-md: 80.3125em; 1285px */
 
   /* Typography */
   --font-sans:
