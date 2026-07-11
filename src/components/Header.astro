@@ -7,27 +7,36 @@ import BgHeadergraphicDesktop from "/public/images/bg-intro-desktop.svg";
 import mobileImagePlane from "/public/images/image-mockups.png";
 ---
 
-<header class="w-full pb-[56px] col-content row-start-1 row-end-2">
-  <div class="absolute overflow-hidden w-svw top-0 left-0 -z-10">
+<header
+  class="w-full pb-[56px] col-content row-start-1 row-end-2 laptop-sm:row-auto laptop-sm:relative"
+>
+  <div
+    class="absolute overflow-hidden w-svw top-0 left-0 -z-10 laptop-sm:w-full laptop-sm:overflow-visible"
+  >
     <BgHeadergraphicMobile class="w-svw mobile-lg:hidden" />
     <BgHeadergraphicDesktop
-      class="w-auto -translate-x-26.25 -translate-y-87.5 hidden mobile-lg:block"
+      class="w-auto -translate-x-26.25 -translate-y-87.5 hidden mobile-lg:block laptop-sm:translate-x-96.25 laptop-sm:-translate-y-67.5 laptop-md:translate-x-117.5 laptop-md:-translate-y-68.75"
     />
   </div>
-  <div class="grid gap-12">
-    <div class="-mt-10 mobile-md:-mt-20 mobile-xl:-mt-32.5 tablet-sm:-mt-42">
+  <div class="grid gap-12 laptop-sm:grid-cols-[auto_1fr] laptop-sm:gap-8">
+    <div
+      class="-mt-10 grid place-items-center max-w-155 mx-auto mobile-md:-mt-20 mobile-xl:-mt-32.5 tablet-sm:-mt-42 laptop-sm:translate-x-43.5 laptop-sm:-translate-y-21 laptop-sm:col-start-2 laptop-sm:m-0 laptop-md:translate-x-62.5 laptop-md:-translate-y-35"
+    >
       <Image
         src={mobileImagePlane}
         alt="Four mobile phones displaying the digital banking app on their screens"
+        class="laptop-sm:min-w-112.5"
       />
     </div>
-    <div class="text-center grid gap-6 max-w-90 mx-auto mobile-md:max-w-107.5">
+    <div
+      class="text-center grid gap-6 max-w-90 mx-auto mobile-md:max-w-107.5 laptop-sm:py-43.25 laptop-sm:row-start-1 laptop-sm:text-left laptop-sm:max-w-111.75 laptop-sm:content-center"
+    >
       <Heading> Next generation digital banking </Heading>
       <BaseText textType="lg">
         Take your financial life online. Your Digitalbank account will be a
         one-stop-shop for spending, saving, budgeting, investing, and much more.
       </BaseText>
-      <CtaButton />
+      <CtaButton additionalStyles={["laptop-sm:ml-0"]} />
     </div>
   </div>
 </header>

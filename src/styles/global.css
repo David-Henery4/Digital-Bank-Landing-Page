@@ -2,17 +2,22 @@
 @import "./grid-styles.css";
 
 @theme {
-
   /* Breakpoints */
   --breakpoint-*: initial;
+
+  /* Mobile */
   --breakpoint-mobile-sm: 26.5em; /* 424px */
   --breakpoint-mobile-md: 32.5em; /* 520px */
   --breakpoint-mobile-lg: 35em; /* 520px */
   --breakpoint-mobile-xl: 40em; /* 640px */
 
+  /* Tablet */
   --breakpoint-tablet-xs: 41.25em; /* 660px */
   --breakpoint-tablet-sm: 46.25em; /* 740px */
 
+  /* Laptop */
+  --breakpoint-laptop-sm: 64em; /* 1024px */
+  --breakpoint-laptop-md: 80.3125em; /* 1285px */
 
   /* Typography */
   --font-sans:
@@ -146,7 +151,10 @@
   /* --grid-template-columns-mobile: 24px 1fr 24px;
   --grid-template-columns-tablet: 80px 1fr 80px;
   --grid-template-columns-desktop: 161px 1fr 161px; */
-  --grid-template-columns-features: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  --grid-template-columns-features: repeat(
+    auto-fit,
+    minmax(min(230px, 100%), 1fr)
+  );
 }
 
 @utility section-y-padding {

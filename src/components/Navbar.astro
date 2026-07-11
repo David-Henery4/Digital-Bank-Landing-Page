@@ -1,6 +1,8 @@
 ---
 import LogoDark from "/public/images/logo-dark.svg";
 import BurgerIcon from "/public/images/icon-hamburger.svg";
+import CtaButton from "./reusable/CtaButton.astro";
+import linksData from "../local-data/linksData";
 ---
 
 <nav
@@ -8,14 +10,31 @@ import BurgerIcon from "/public/images/icon-hamburger.svg";
 >
   <div class="w-full flex justify-between items-center col-content">
     <a href="/">
-      <span class="sr-only">
-        Home Logo Link
-      </span>
+      <span class="sr-only"> Home Logo Link </span>
       <LogoDark />
     </a>
-    <button class="hover:cursor-pointer">
+
+    <menu
+      class="hidden ml-auto laptop-sm:flex justify-center items-center gap-8 text-preset-7-regular text-gray-600"
+    >
+      {
+        linksData
+          .map((linkInfo) => {
+            return (
+              <li>
+                <a href="#">{linkInfo.title}</a>
+              </li>
+            );
+          })
+          .slice(0, 5)
+      }
+    </menu>
+
+    <button class="hover:cursor-pointer laptop-sm:hidden">
       <span class="sr-only">Open Sidebar Navigation</span>
       <BurgerIcon />
     </button>
+
+    <CtaButton additionalStyles={["hidden", "mr-0", "laptop-sm:block"]} />
   </div>
 </nav>
