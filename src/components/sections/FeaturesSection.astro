@@ -4,7 +4,7 @@ import featuresData from "../../local-data/featuresData";
 import { Image } from "astro:assets";
 ---
 
-<section class="w-full section-y-padding text-center">
+<section class="w-full section-y-padding text-center laptop-sm:pb-20.75">
   <div class="grid gap-4 mx-auto max-w-82.5 mobile-md:max-w-129.5">
     <Heading headingType="h2"> Why choose Digitalbank? </Heading>
     <BaseText textType="lg">
@@ -30,7 +30,10 @@ import { Image } from "astro:assets";
             </div>
             <div class="grid gap-6 mx-auto max-w-63.75">
               <Heading headingType="h3">{featureInfo.title}</Heading>
-              <BaseText textType="md" optionalStyles={["max-w-[327px] mx-auto"]}>
+              <BaseText
+                textType="md"
+                optionalStyles={["max-w-[327px] mx-auto"]}
+              >
                 {featureInfo.description}
               </BaseText>
             </div>

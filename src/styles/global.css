@@ -164,3 +164,28 @@
   /* Tablet: 80px */
   /* Desktop: 96px */
 }
+
+/* Sidebar stuff */
+
+.temp-nav{
+  position: absolute;
+  position-anchor: --nav-container;
+  position-area: bottom center;
+  width: 100%;
+  padding: 24px;
+  margin-top: 48px;
+  border-radius: 4px;
+  background-color: var(--color-white);
+}
+
+body:has(dialog[open]){
+  overflow-y: hidden;
+  @media (width >= 1024px) {
+    overflow-y: scroll;
+  }
+}
+
+dialog::backdrop{
+  /* background-color: black; */
+  background-image: var(--background-image-gradient-2);
+}

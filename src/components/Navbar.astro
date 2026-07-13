@@ -1,14 +1,44 @@
 ---
 import LogoDark from "/public/images/logo-dark.svg";
 import BurgerIcon from "/public/images/icon-hamburger.svg";
+import CloseIcon from "/public/images/icon-close.svg";
 import CtaButton from "./reusable/CtaButton.astro";
 import linksData from "../local-data/linksData";
 ---
 
+<script src="../scripts/sidebar.ts"></script>
+
 <nav
   class="w-full bg-white py-6 col-full grid-layout row-start-1 row-end-2 z-10 self-start"
 >
-  <div class="w-full flex justify-between items-center col-content">
+  <div
+    id=""
+    class="w-full flex justify-between items-center col-content [anchor-name:--nav-container]"
+  >
+    <dialog closedby="any" id="sidebar-dialog" class="temp-nav">
+      <div class="w-full grid place-items-end">
+        <button id="close-sidebar" class="hover:cursor-pointer">
+          <span class="sr-only">
+            Close Sidebar Button
+          </span>
+          <CloseIcon />
+        </button>
+      </div>
+      <menu class="w-full flex flex-col justify-center items-center gap-4 mt-4">
+        {
+          linksData
+            .map((linkInfo) => {
+              return (
+                <li>
+                  <a href="#">{linkInfo.title}</a>
+                </li>
+              );
+            })
+            .slice(0, 5)
+        }
+      </menu>
+    </dialog>
+
     <a href="/">
       <span class="sr-only"> Home Logo Link </span>
       <LogoDark />
@@ -30,8 +60,8 @@ import linksData from "../local-data/linksData";
       }
     </menu>
 
-    <button class="hover:cursor-pointer laptop-sm:hidden">
-      <span class="sr-only">Open Sidebar Navigation</span>
+    <button id="sidebar-toggle" class="hover:cursor-pointer laptop-sm:hidden">
+      <span class="sr-only">toggle Sidebar Navigation</span>
       <BurgerIcon />
     </button>
 
