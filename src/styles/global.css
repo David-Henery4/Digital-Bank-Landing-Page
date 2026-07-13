@@ -156,6 +156,7 @@
     auto-fit,
     minmax(min(230px, 100%), 1fr)
   );
+  --grid-template-columns-footer-links: repeat(2, 160px);
 }
 
 @utility section-y-padding {

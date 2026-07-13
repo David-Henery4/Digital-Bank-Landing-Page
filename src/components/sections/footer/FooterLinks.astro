@@ -2,14 +2,18 @@
 import linksData from "../../../local-data/linksData";
 ---
 
-<menu class="grid gap-4">
+<menu
+  class="grid gap-4 laptop-sm:grid-cols-footer-links laptop-sm:justify-items-start laptop-sm:gap-y-6 laptop-sm:leading-[normal]"
+>
   {
-    linksData.map((linkItem) => {
-      return (
-        <li>
-          <a href="#">{linkItem.title}</a>
-        </li>
-      );
-    }).slice(1)
+    linksData
+      .map((linkItem) => {
+        return (
+          <li>
+            <a href="#">{linkItem.title}</a>
+          </li>
+        );
+      })
+      .slice(1)
   }
 </menu>

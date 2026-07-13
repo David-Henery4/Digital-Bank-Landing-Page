@@ -3,7 +3,9 @@ import CtaButton from "../../reusable/CtaButton.astro";
 import BaseText from "../../text/BaseText.astro";
 ---
 
-<div class="grid gap-6">
-  <CtaButton />
+<div
+  class="grid gap-6 laptop-sm:text-right laptop-sm:ml-0 laptop-sm:content-start laptop-md:ml-auto"
+>
+  <CtaButton additionalStyles={["laptop-sm:mr-0"]} />
   <BaseText> © Digitalbank. All Rights Reserved </BaseText>
 </div>

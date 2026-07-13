@@ -1,17 +1,19 @@
 ---
-import { FooterLinks, CtaAndCopyright, LogoAndSocials } from "./sections/footer";
+import {
+  FooterLinks,
+  CtaAndCopyright,
+  LogoAndSocials,
+} from "./sections/footer";
 ---
 
 <footer class="w-full py-13.5 col-full bg-blue-950 text-white grid-layout">
+  <div
+    class="col-content text-center flex flex-col gap-8 laptop-sm:flex-row laptop-sm:gap-16 laptop-md:gap-1500"
+  >
+    <LogoAndSocials />
 
-  <div class="col-content text-center flex flex-col gap-8">
+    <FooterLinks />
 
-    <LogoAndSocials/>
-
-    <FooterLinks/>
-
-    <CtaAndCopyright/>
-
+    <CtaAndCopyright />
   </div>
-
 </footer>
