@@ -167,25 +167,41 @@
 
 /* Sidebar stuff */
 
-.temp-nav{
-  position: absolute;
-  position-anchor: --nav-container;
-  position-area: bottom center;
+/* @support (position-anchor: --nav-container) {
+  .temp-nav {
+    position: absolute;
+    position-anchor: --nav-container;
+    position-area: bottom center;
+    width: 100%;
+    padding: 24px;
+    margin-top: 48px;
+    border-radius: 4px;
+    background-color: var(--color-white);
+  }
+} */
+
+.sidebar-nav {
+  position: fixed;
+  /* position-anchor: --nav-container; */
+  /* position-area: bottom center; */
   width: 100%;
   padding: 24px;
-  margin-top: 48px;
   border-radius: 4px;
   background-color: var(--color-white);
+  top: 78px;
+  left: 50%;
+  margin: 0;
+  translate: -50% 0%;
 }
 
-body:has(dialog[open]){
+body:has(dialog[open]) {
   overflow-y: hidden;
   @media (width >= 1024px) {
     overflow-y: scroll;
   }
 }
 
-dialog::backdrop{
+dialog::backdrop {
   /* background-color: black; */
   background-image: var(--background-image-gradient-2);
 }

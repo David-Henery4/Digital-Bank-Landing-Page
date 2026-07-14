@@ -13,14 +13,12 @@ import linksData from "../local-data/linksData";
 >
   <div
     id=""
-    class="w-full flex justify-between items-center col-content [anchor-name:--nav-container]"
+    class="w-full flex justify-between items-center col-content relative"
   >
-    <dialog closedby="any" id="sidebar-dialog" class="temp-nav">
+    <dialog closedby="any" id="sidebar-dialog" class="sidebar-nav">
       <div class="w-full grid place-items-end">
         <button id="close-sidebar" class="hover:cursor-pointer">
-          <span class="sr-only">
-            Close Sidebar Button
-          </span>
+          <span class="sr-only"> Close Sidebar Button </span>
           <CloseIcon />
         </button>
       </div>
@@ -30,7 +28,9 @@ import linksData from "../local-data/linksData";
             .map((linkInfo) => {
               return (
                 <li>
-                  <a href="#">{linkInfo.title}</a>
+                  <a href="#" class="text-preset-5-regular hover:text-gray-600">
+                    {linkInfo.title}
+                  </a>
                 </li>
               );
             })
@@ -60,8 +60,8 @@ import linksData from "../local-data/linksData";
       }
     </menu>
 
-    <button id="sidebar-toggle" class="hover:cursor-pointer laptop-sm:hidden">
-      <span class="sr-only">toggle Sidebar Navigation</span>
+    <button id="open-toggle" class="hover:cursor-pointer laptop-sm:hidden">
+      <span class="sr-only">Open Sidebar Navigation</span>
       <BurgerIcon />
     </button>
 
