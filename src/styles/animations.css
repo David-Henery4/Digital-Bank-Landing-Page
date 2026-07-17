@@ -1,0 +1,53 @@
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+}
+
+.fade-in.fade-in-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/********/
+
+.feature-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.feature-card.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-card:nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.feature-card:nth-child(3) {
+    transition-delay: 200ms;
+}
+
+.feature-card:nth-child(4) {
+    transition-delay: 300ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-card{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

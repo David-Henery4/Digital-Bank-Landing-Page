@@ -6,11 +6,11 @@ import { Image } from "astro:assets";
 
 <section class="w-full text-center section-y-padding">
   <Heading headingType="h2"> Latest Articles </Heading>
-  <div class="mt-12 grid gap-4 grid-cols-features">
+  <div id="articles-container" class="mt-12 grid gap-4 grid-cols-features">
     {
       articlesData.map((articleInfo) => {
         return (
-          <div class="bg-white overflow-hidden rounded-md">
+          <div class="bg-white overflow-hidden rounded-md feature-card">
             <Image
               src={articleInfo.image}
               alt={articleInfo.title}
