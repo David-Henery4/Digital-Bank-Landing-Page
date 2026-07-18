@@ -33,9 +33,7 @@ Your users should be able to:
 
 ### Links
 
-(Solution URL to be added)
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/digitalbank-landing-grid-astrojs-tailwindcss-animations-BtfCnruzwC)
 - Live Site URL: [https://digital-bank-home-page.netlify.app/](https://digital-bank-home-page.netlify.app/)
 
 ## My process
